@@ -1,0 +1,106 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+.gallerOverlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  display: none;
+  background-color: rgba(0,0,0,0.5);
+  transition: background-color 0.3s ease;
+}
+
+.container {
+  width: 1170px;
+  margin: auto;
+  flex-wrap: wrap;
+  display: flex;
+}
+
+.gallery-item {
+  flex-basis: 23%;
+  margin: 1%;
+  overflow: hidden;
+}
+
+.gallery-item img {
+  width: 100%;
+  
+  cursor: pointer;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.05);
+  opacity: 0.8;
+}
+
+/* ImageBox */
+.imageBox {
+  width: 40%;
+  height: 50%;
+  background-color: white;
+  position: fixed;
+  left: 30%;
+  top: 15%;
+  transform: scale(0);
+  transition: transform 0.4s ease;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.imageBox img {
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.3s ease;
+}
+
+/* Close Button */
+.close {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  font-size: 35px;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.close:hover {
+  color: rgb(99, 40, 151);
+  transform: rotate(90deg) scale(1.2);
+}
+
+/* Overlay Show */
+.galleryOverlayShow {
+  display: block;
+}
+
+.imageBoxShow {
+  transform: scale(1);
+}
+
+/* Prev/Next Buttons */
+.imageBox button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  font-size: 30px;
+  padding: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.imageBox button:hover {
+  background: rgba(0,0,0,0.8);
+  transform: scale(1.2);
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
